@@ -3,7 +3,7 @@
     <div class="new-challenge">
       {{#link-to 'instrument.challenge.video.new'}}
       <div class="button hvr-border-fade">
-          New Video
+          Post a Video
       </div>
       {{/link-to}}
     </div>
@@ -13,7 +13,7 @@
   <div class="container">
     <h1 class="text__title center">{{challenge.title}}</h1>
     <p class="text__lowercase center">{{challenge.description}}</p>
-    <div class="grid section">
+    <div class="grid">
       {{#each challenge.posts as |post|}}
           <div class="video">
             {{ember-youtube ytid=post.youtubeId width="480" height="360"}}

@@ -12,22 +12,19 @@
 
 <div class="section">
   <div class="container">
+    <p class="text center">Select a challenge to see user submissions.</p>
     <div class="grid">
       {{#each model.challenges as |challenge|}}
           <div class="grid__item">
             <div class="card">
-              <div class="card__content center section">
-                <h3 class="text__title hvr-underline-from-center">
-                  {{#link-to 'instrument.challenge.video' challenge.id}}
-                    {{challenge.title}}
-                  {{/link-to}}
-                </h3>
-                {{!-- {{#if currentUser.user}}
-                {{currentUser.user.name}}
-                {{/if}} --}}
-                {{!-- <p class="small-text text__lowercase">by calebjwl</p> --}}
-                <p class="text__lowercase">{{challenge.description}}</p>
-              </div>
+              {{#link-to 'instrument.challenge.video' challenge.id}}
+                <div class="card__content center section">
+                  <h3 class="text__title hvr-underline-from-center">
+                      {{challenge.title}}
+                  </h3>
+                  <p class="text__lowercase">{{challenge.description}}</p>
+                </div>
+              {{/link-to}}
               <div class="card__footer">
                 <p class="button-bar">
                   {{#link-to 'instrument.challenge.edit' challenge class="button button--black button--fullwidth"}}
@@ -38,15 +35,14 @@
               </div>
             </div>
           </div>
-
-        {{else}}
-        <div class="grid__item">
-          <p class="text center">No challenges to display.
-            {{#link-to 'instrument.challenge.new' class="hvr-underline-from-center"}}
-              Add a new challenge!
-            {{/link-to}}
-          </p>
-        </div>
+      {{else}}
+      <div class="grid__item">
+        <p class="text center">No challenges to display.
+          {{#link-to 'instrument.challenge.new' class="hvr-underline-from-center"}}
+          Add a new challenge!
+          {{/link-to}}
+        </p>
+      </div>
       {{/each}}
     </div>
   </div>

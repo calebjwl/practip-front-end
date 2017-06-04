@@ -18,9 +18,11 @@ $b-primary: 2.5px solid $c-black;
 @import 'challenge-new';
 @import 'user-profile';
 @import 'login-and-register';
-
 @import 'video-index';
 @import 'modal';
+
+// @import 'dashboard-media';
+// @import 'instrument-index-media';
 
 .section {
   padding: $m-gutter;
@@ -97,5 +99,10 @@ $b-primary: 2.5px solid $c-black;
 
 .logo {
   display: flex;
+  width: 70%;
   margin: 0 auto;
+}
+
+.lowercase {
+  text-transform: none;
 }

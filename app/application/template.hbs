@@ -1,31 +1,31 @@
-<header class="banner">
-  <nav class="banner__navbar">
-    <div class="container">
-      <div class="navlist navlist__left">
+<nav class="container">
+  <div class="navlist">
+    <div class="navlist__left">
+      {{#link-to "instrument"}}
         <div class="button hvr-border-fade" href="#">
-          {{#link-to "instrument"}}Home{{/link-to}}
+          Home
         </div>
-        <ul class="navlist navlist__right">
-          {{#if session.isAuthenticated}}
-            {{!-- {{#link-to "user-profile" class="button hvr-border-fade"}}
-              Profile
-            {{/link-to}} --}}
-            <a {{action session.invalidate}} class="button hvr-border-fade">
-              Sign Out
-            </a>
-          {{else}}
-            {{#link-to "login" class="button hvr-border-fade"}}
-              Login
-            {{/link-to}}
-            {{#link-to "login.register" class="button hvr-border-fade"}}
-              Register
-            {{/link-to}}
-          {{/if}}
-        </ul>
-      </div>
+      {{/link-to}}
     </div>
-  </nav>
-</header>
+      <ul class="navlist navlist__right">
+        {{#if session.isAuthenticated}}
+          {{!-- {{#link-to "user-profile" class="button hvr-border-fade"}}
+            Profile
+          {{/link-to}} --}}
+          <a {{action session.invalidate}} class="button hvr-border-fade">
+            Sign Out
+          </a>
+        {{else}}
+          {{#link-to "login" class="button hvr-border-fade"}}
+            Login
+          {{/link-to}}
+          {{#link-to "login.register" class="button hvr-border-fade"}}
+            Register
+          {{/link-to}}
+        {{/if}}
+      </ul>
+  </div>
+</nav>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <script src="https://use.fontawesome.com/2b59555316.js"></script>
 
